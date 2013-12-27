@@ -48,6 +48,7 @@ func main() {
 
 	//fmt.Println(prog)
 	
+	runtime.GOMAXPROCS(runtime.NumCPU())
 	in = bufio.NewReader(os.Stdin)
 	spawnThread(0, DATALENGTH/2)
 	total.Wait()
